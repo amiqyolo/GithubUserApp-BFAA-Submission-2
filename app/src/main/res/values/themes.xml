@@ -1,0 +1,97 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GithubUserApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorAccent</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnSecondary">@color/colorAccent</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.GithubUserApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.GithubUserApp.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:background">@color/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.GithubUserApp.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="TextAppearance.App.Toolbar.Collapse" parent="TextAppearance.MaterialComponents.Headline6" />
+
+    <style name="TextAppearance.App.Toolbar.Title" parent="TextAppearance.MaterialComponents.Headline4" />
+
+    <style name="TextContent">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextContent.ColorPrimary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextContent.ColorTextPrimary">
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="TextContent.ColorTextPrimaryVariant">
+        <item name="android:textColor">@color/colorTextPrimaryVariant</item>
+    </style>
+
+    <style name="TextContent.ColorTextPrimaryVariant.Header">
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextContent.ColorPrimary.Row">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="TextContent.ColorTextPrimary.Field">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="drawableTint">@color/colorTextPrimaryVariant</item>
+    </style>
+
+    <style name="TextInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextInfo.ColorPrimary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextInfo.ColorTextPrimaryVariant">
+        <item name="android:textColor">@color/colorTextPrimaryVariant</item>
+    </style>
+
+    <style name="TextInfo.ColorTextPrimaryVariant.Center">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextInfo.ColorPrimary.Center">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextInfo.ColorPrimary.Center.Field">
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.GithubUserApp"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false"
+            app:toolbarId="@id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/v_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/bg_header"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    tools:viewBindingIgnore="true" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_detail_avatar_url"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    app:civ_border_color="@color/colorPrimaryVariant"
+                    app:civ_border_width="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/v_header"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias=".9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_header"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tv_detail_name"
+                    style="@style/TextContent.ColorTextPrimaryVariant.Header"
+                    app:layout_constraintBottom_toBottomOf="@id/v_header"
+                    app:layout_constraintEnd_toStartOf="@id/iv_detail_avatar_url"
+                    app:layout_constraintHorizontal_bias=".1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_detail_public_repos"
+                    app:layout_constraintVertical_bias=".3"
+                    tools:text="Mr. John Doe" />
+
+                <TextView
+                    android:id="@+id/tv_detail_public_repos"
+                    style="@style/TextInfo.ColorTextPrimaryVariant.Center"
+                    app:layout_constraintBottom_toTopOf="@id/info_public_repos"
+                    app:layout_constraintEnd_toEndOf="@id/info_public_repos"
+                    app:layout_constraintStart_toStartOf="@id/info_public_repos"
+                    tools:text="100" />
+
+                <TextView
+                    android:id="@+id/info_public_repos"
+                    style="@style/TextInfo.ColorTextPrimaryVariant.Center"
+                    android:text="@string/info_repository"
+                    app:layout_constraintBottom_toTopOf="@id/iv_detail_avatar_url"
+                    app:layout_constraintEnd_toEndOf="@id/iv_detail_avatar_url"
+                    app:layout_constraintStart_toStartOf="@id/iv_detail_avatar_url"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias=".9" />
+
+                <TextView
+                    android:id="@+id/tv_detail_login"
+                    style="@style/TextContent.ColorTextPrimary.Field"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="24dp"
+                    app:drawableStartCompat="@drawable/ic_person"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_header"
+                    tools:text="john_doe" />
+
+                <TextView
+                    android:id="@+id/tv_detail_location"
+                    style="@style/TextContent.ColorTextPrimary.Field"
+                    android:layout_marginTop="8dp"
+                    app:drawableStartCompat="@drawable/ic_location"
+                    app:layout_constraintBottom_toTopOf="@id/tv_detail_company"
+                    app:layout_constraintStart_toStartOf="@id/tv_detail_login"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_login"
+                    tools:text="Indonesia" />
+
+                <TextView
+                    android:id="@+id/tv_detail_company"
+                    style="@style/TextContent.ColorTextPrimary.Field"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    app:drawableStartCompat="@drawable/ic_business_center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_detail_location"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_location"
+                    tools:text="Google .Inc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/Theme.GithubUserApp.AppBarOverlay"
+                app:layout_collapseMode="pin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/Theme.GithubUserApp.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:contentDescription="@string/app_name"
+            android:elevation="0dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorSecondary"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+            app:tabTextColor="@color/colorTextPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include
+        android:id="@+id/detail_progress_bar"
+        layout="@layout/layout_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

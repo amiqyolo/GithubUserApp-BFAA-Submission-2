@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Github User App</string>
+    <string name="tab_text_1">Followers</string>
+    <string name="tab_text_2">Following</string>
+    <string name="info_repository">Repository</string>
+    <string name="info_following">Following\n</string>
+    <string name="info_follower">Followers\n</string>
+    <string name="detail_title">Detail Profile</string>
+    <string name="title_state_empty">Data Doesn\'t Exist.</string>
+    <string name="title_state_server">Connection Problem.</string>
+    <string name="message_state_empty">Dont worry, Search user in the SearchBox.</string>
+    <string name="message_state_serve">Error %s.</string>
+</resources>
